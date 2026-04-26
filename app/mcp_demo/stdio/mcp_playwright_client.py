@@ -6,7 +6,7 @@ os.environ["PLAYWRIGHT_ONE_BROWSER"] = "true"
 from langchain_core.messages import HumanMessage, AIMessage, ToolMessage
 from langgraph.prebuilt import create_react_agent
 from langchain_mcp_adapters.tools import load_mcp_tools
-from mcp_demo import StdioServerParameters, stdio_client, ClientSession
+from mcp import StdioServerParameters, stdio_client, ClientSession
 
 from app.common import llm
 
