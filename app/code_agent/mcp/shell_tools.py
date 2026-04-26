@@ -10,7 +10,6 @@ mcp = FastMCP()
 @mcp.tool(name="run_shell", description="Run a shell command")
 def run_shell_command(command:
     Annotated[str, Field(description="shell command will be executed", examples="ls -al")]) -> str:
-    print(command)
     try:
         shell_command = shlex.split(command)
         if "rm" in shell_command:
@@ -34,5 +33,5 @@ def run_shell_command_popen(command):
 
 
 if __name__ == '__main__':
-    print(run_shell_command("mkdir -p 'd:/study/ai/ai-agent-test/.temp/Test'"))
-    #mcp.run(transport="stdio")
+    #print(run_shell_command("mkdir -p 'd:/study/ai/ai-agent-test/.temp/Test'"))
+    mcp.run(transport="stdio")

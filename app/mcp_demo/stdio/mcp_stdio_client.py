@@ -13,7 +13,7 @@ from app.common import llm
 async def create_mcp_stdio_client():
     server_params = StdioServerParameters(
         command="python",
-        args=["D:/study/ai/ai-code_agent-test/app/mcp_demo/stdio/mcp_stdio_server.py"],
+        args=["D:/study/ai/ai-agent-test/app/mcp_demo/stdio/mcp_stdio_server.py"],
     )
 
     async with stdio_client(server_params) as (read, write):
